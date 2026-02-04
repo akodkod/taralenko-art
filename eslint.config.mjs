@@ -10,9 +10,11 @@ import importNewlines from "eslint-plugin-import-newlines"
 import unusedImports from "eslint-plugin-unused-imports"
 import globals from "globals"
 import ts from "typescript-eslint"
+import eslintPluginAstro from "eslint-plugin-astro"
 
 export default defineConfig(
   cspellRecommended,
+  ...eslintPluginAstro.configs.recommended,
   {
     files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
   },
