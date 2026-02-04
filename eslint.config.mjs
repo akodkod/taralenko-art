@@ -19,6 +19,7 @@ export default defineConfig(
   {
     ignores: [
       ".next/",
+      ".astro/",
       ".nitro/",
       ".output/",
       ".vercel/",
@@ -98,17 +99,7 @@ export default defineConfig(
       // }],
       "better-tailwindcss/no-unknown-classes": ["error", {
         ignore: [
-          "web",
-          "ios",
-          "android",
-          "mobile",
-          "toaster",
-          "corner-shape-unset",
-          "full-size-children-center",
-          "p[trblxy]?-safe",
-          "p[trblxy]?-safe-or-.*",
-          "m[trblxy]?-safe",
-          "m[trblxy]?-safe-or-.*",
+          "border-smooth",
         ],
       }],
     },

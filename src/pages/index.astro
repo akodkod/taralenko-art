@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets"
+import Layout from "../layouts/layout.astro"
+import goddessOfLoveImage from "../images/goddess-of-love.jpg"
+import signatureImage from "../images/signature.png";
+---
+
+<Layout>
+  <div
+    class="w-screen min-h-screen flex flex-col items-center justify-center px-6 pt-6 pb-18 overflow-y-auto overflow-x-hidden md:flex-row md:gap-10"
+  >
+    <div
+      class="w-full rounded-md overflow-hidden shadow-painting-frame p-(--painting-frame-width) bg-card border-smooth relative sm:-mt-4 sm:max-w-sm"
+    >
+      <Image
+        src={goddessOfLoveImage}
+        alt="A classical-style painting of a warm-toned woman with curly dark hair and large white flowers behind her head, looking down with a soft expression. Three small winged cupids float around her—one near her shoulder, one by her hair, and one resting on her forearm — while she holds a dark bow and a gold-tipped arrow against a pale blue sky with clouds."
+        class="size-full object-cover rounded-md bg-card border-smooth"
+      />
+
+      <div
+        class="absolute inset-(--painting-frame-width) shadow-painting-inner rounded-md border-smooth"
+      >
+      </div>
+    </div>
+
+    <div>
+      <Image
+        src={signatureImage}
+        alt="Signature"
+        class="max-w-[90vw] mx-auto mt-16 md:mt-0 sm:max-w-lg"
+      />
+
+      <p
+        class="text-muted-foreground uppercase text-sm tracking-wide text-balance max-w-prose text-center mt-4"
+      >
+        Hello, my name is <strong class="font-medium text-foreground">Anastasiia</strong>
+        <br />
+        I paint people’s souls
+      </p>
+
+      <a
+        href="https://instagram.com/taralenko.art"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="tracking-tight bg-primary text-primary-foreground px-4 py-2 rounded-md text-sm font-medium mx-auto block w-fit mt-12 md:mt-36"
+      >
+        Contact me
+      </a>
+    </div>
+  </div>
+</Layout>

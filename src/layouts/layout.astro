@@ -1,8 +1,12 @@
 ---
 import "../styles/global.css"
+import { Font } from "astro:assets";
 ---
 
-<html lang="en">
+<html
+  lang="en"
+  class="bg-background antialiased text-foreground"
+>
   <head>
     <meta charset="utf-8" />
     <link
@@ -22,8 +26,17 @@ import "../styles/global.css"
     />
 
     <title>Taralenko Art</title>
+
+    <Font
+      preload
+      cssVariable="--font-eb-garamond"
+    />
+    <Font
+      preload
+      cssVariable="--font-inter"
+    />
   </head>
   <body>
-    <h1>Astro</h1>
+    <slot />
   </body>
 </html>

@@ -14,6 +14,7 @@
   ],
   "ignorePaths": [
     ".next",
+    ".astro",
     ".vercel",
     ".trigger",
     ".tanstack",
