@@ -2,12 +2,14 @@
 import { defineConfig, fontProviders } from "astro/config"
 
 import tailwindcss from "@tailwindcss/vite"
+import favicons from "astro-favicons"
 
 // https://astro.build/config
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+
   experimental: {
     contentIntellisense: true,
     fonts: [{
@@ -17,8 +19,14 @@ export default defineConfig({
     }, {
       provider: fontProviders.google(),
       name: "Inter",
-      weights: [400, 500, 600, 700],
+      weights: [400, 500, 600],
       cssVariable: "--font-inter",
     }],
   },
+
+  integrations: [favicons({
+    input: "public/favicon-base.png",
+    name: "Taralenko Art",
+    short_name: "Taralenko Art",
+  })],
 })

@@ -1,6 +1,7 @@
 Anastasiia
 callees
 coolors
+favicons
 Frontmatter
 oxlint
 superellipse
