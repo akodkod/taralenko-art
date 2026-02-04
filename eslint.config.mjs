@@ -8,25 +8,13 @@ import betterTailwindcss from "eslint-plugin-better-tailwindcss"
 import * as betterTailwindcssDefaults from "eslint-plugin-better-tailwindcss/api/defaults"
 import importNewlines from "eslint-plugin-import-newlines"
 import unusedImports from "eslint-plugin-unused-imports"
-import globals from "globals"
-import ts from "typescript-eslint"
 import eslintPluginAstro from "eslint-plugin-astro"
 
 export default defineConfig(
   cspellRecommended,
   ...eslintPluginAstro.configs.recommended,
   {
-    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
-  },
-  {
-    languageOptions: {
-      parser: ts.parser,
-      sourceType: "module",
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-      },
-    },
+    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx,astro}"],
   },
   {
     ignores: [
@@ -49,7 +37,7 @@ export default defineConfig(
   {
     settings: {
       "better-tailwindcss": {
-        entryPoint: "src/global.css",
+        entryPoint: "src/styles/global.css",
         attributes: [
           "class",
           "className",
